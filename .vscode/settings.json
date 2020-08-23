@@ -1,0 +1,39 @@
+{
+  "typescript.tsdk": "node_modules/typescript/lib",
+
+  // ESLint
+  "eslint.options": {
+    "configFile": ".eslintrc.json"
+  },
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ],
+
+  // Files
+  "files.encoding": "utf8",
+  "files.trimFinalNewlines": true,
+  "files.insertFinalNewline": true,
+  "files.exclude": {
+    "**/node_modules": true,
+    "tsconfig*": true,
+    "*lock.json": true,
+    "**/*.js": true,
+    "**/.e[^n]*": true,
+    "Dockerfile": true,
+    "docker-compose.yml": true,
+    "package.json": true,
+    ".vscode": true
+  },
+  // Editor
+  "editor.quickSuggestions": {
+    "strings": true
+  },
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true,
+    "eslint.format.enable": true
+  }
+}

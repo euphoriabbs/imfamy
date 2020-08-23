@@ -1,0 +1,29 @@
+{
+  "$schema": "http://json.schemastore.org/tsconfig",
+  "compilerOptions": {
+    "strict": true,
+    "strictFunctionTypes": false,
+    "module": "esnext",
+    "allowSyntheticDefaultImports": true,
+    "target": "es3",
+    "moduleResolution": "node",
+    "experimentalDecorators": true,
+    "types": ["node"],
+    "baseUrl": ".",
+    "typeRoots": ["bbs/iniquity/@types"],
+    "lib": ["es2020"],
+    "skipLibCheck": true
+  },
+  "exclude": [
+    ".vscode",
+    "aws",
+    "assets",
+    "docs",
+    "hooks",
+    "node_modules",
+    "platforms",
+    "private",
+    "public",
+    "spec"
+  ]
+}

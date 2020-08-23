@@ -1,5 +1,6 @@
 declare function load(library: string): void;
 declare function alert(library: string): void;
+};
 
 /**
  * Render options

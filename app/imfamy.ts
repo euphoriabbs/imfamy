@@ -1,13 +1,9 @@
+load("sbbsdefs.js");
+
 /**
  * Iniquity
  */
-export class Iniquity {
-  public root: string;
-
-  constructor(root: string) {
-    this.root = root;
-  }
-
+class Iniquity {
   render(options: RenderOptions) {
     let mode = options.mode || "line";
     let encoding = options.encoding || "CP437";
@@ -15,7 +11,7 @@ export class Iniquity {
 
     if (options.text) {
       // @ts-ignore
-      let file = new File(`${this.root}/artwork/${options.text}`);
+      let file = new File(`/euphoria/app/${options.text}`);
 
       // @ts-ignore
       if (!file.open("r")) {
@@ -64,10 +60,10 @@ export class Iniquity {
   }
 }
 
-const iq = new Iniquity("/euphoria/boards/iniquity");
+const iq = new Iniquity();
 
 iq.render({
-  text: "art.phoenix.welcome.ans",
+  text: "imfamy.ans",
   encoding: "CP437",
   mode: "line",
   speed: 50,

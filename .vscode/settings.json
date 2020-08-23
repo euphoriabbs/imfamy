@@ -25,7 +25,8 @@
     "Dockerfile": true,
     "docker-compose.yml": true,
     "package.json": true,
-    ".vscode": true
+    ".vscode": true,
+    "@types": true
   },
   // Editor
   "editor.quickSuggestions": {

@@ -27,7 +27,7 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get update \
 
 FROM Synchronet as Euphoria
 LABEL name="euphoria"
-LABEL version="2.1.0"
+LABEL version="3.0.0"
 
 WORKDIR /euphoria
 COPY . .
@@ -37,18 +37,12 @@ RUN cd /sbbs/exec/ \
     && mv logon.js logon.js-original \
     && cd /sbbs/text/ \
     && mv answer.msg answer.msg-original ; touch answer.msg \
-    && rm -rf /sbbs/web/root \
-    && ln -s /euphoria/boards/phoenix/web/root /sbbs/web/root \
-    && ln -s /euphoria/boards/iniquity/iniquity.js /sbbs/exec/login.js \
-    && ln -s /euphoria/boards/phoenix/telnet/phoenix.logon.js /sbbs/exec/logon.js \
-    && ln -s /euphoria/boards/phoenix/telnet/phoenix.shell.js /sbbs/exec/phoenix.shell.js 
+    && ln -s /euphoria/app/imfamy.js /sbbs/exec/login.js
 
 VOLUME .:/euphoria
 
 # Start Euphoria
 EXPOSE 22
 EXPOSE 23
-EXPOSE 80
-EXPOSE 443
 
 CMD ["/sbbs/exec/sbbs"]

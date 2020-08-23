@@ -17,16 +17,16 @@
   "files.trimFinalNewlines": true,
   "files.insertFinalNewline": true,
   "files.exclude": {
-    "**/node_modules": true,
-    "tsconfig*": true,
-    "*lock.json": true,
-    "**/*.js": true,
-    "**/.e[^n]*": true,
-    "Dockerfile": true,
-    "docker-compose.yml": true,
-    "package.json": true,
-    ".vscode": true,
-    "@types": true
+    "**/node_modules": false,
+    "tsconfig*": false,
+    "*lock.json": false,
+    "**/*.js": false,
+    "**/.e[^n]*": false,
+    "Dockerfile": false,
+    "docker-compose.yml": false,
+    "package.json": false,
+    ".vscode": false,
+    "@types": false
   },
   // Editor
   "editor.quickSuggestions": {

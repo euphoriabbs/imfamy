@@ -5,8 +5,11 @@ load("sbbsdefs.js")
  * A whole bunch of functions
  */
 class BBS {
-    constructor() {
-        console.inactivity_warning = 30
+    public config: IBBSConfigParams
+
+    constructor(config: IBBSConfigParams) {
+        this.config = config
+        console.inactivity_warning = 9999999
     }
     /**
      * Renders text
@@ -62,9 +65,13 @@ class BBS {
         }
     }
 
-    say(word: string) {
+    /**
+     * Says bbs
+     * @param text
+     */
+    say(text: string) {
         // @ts-ignore
-        console.print(word)
+        console.print(text)
     }
 
     pause() {
@@ -75,5 +82,30 @@ class BBS {
     sleep(speed: number) {
         // @ts-ignore
         sleep(speed)
+    }
+
+    /**
+     * Ask
+     * Displays a prompt (value) and returns a string of user input (ala clent-side JS)
+     * @param question
+     * @returns response
+     */
+    ask(question: string): string {
+        // @ts-ignore
+        return prompt(question)
+    }
+    /**
+     * execScriptPopen
+     * @param script
+     * @returns Output from script executed as an array of strings
+     */
+    execScriptPopen(script: string): string[] {
+        // @ts-ignore
+        return system.popen(`node /euphoria/scripts/${script}.js`)
+    }
+    execScript(script: string): void {
+        // @ts-ignore
+        system.exec(`node /euphoria/scripts/${script}.js`)
+        return
     }
 }

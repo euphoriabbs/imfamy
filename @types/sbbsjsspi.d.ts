@@ -8,6 +8,7 @@ declare let system: ISBBSSystem = {}
 interface ISSBSConsole {
     print: any
     inactivity_warning: number
+    inactivity_hangup: number
     putmsg: any
     line_counter: number
     clear: any

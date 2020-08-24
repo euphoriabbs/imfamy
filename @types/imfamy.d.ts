@@ -2,11 +2,11 @@
  * Render options
  */
 interface IRenderOptions {
-    path: string
+    file: string
     speed?: number
     encoding?: "CP437" | "UTF8"
     mode?: "line" | "character"
-    clearScreen?: boolean
+    clearScreenBefore?: boolean
 }
 
 /**

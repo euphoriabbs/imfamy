@@ -1,6 +1,6 @@
 # Imfamy
 
-The next generation version of Euphoria written in TypeScript
+The next version of Euphoria BBS written in TypeScript
 
 ## Synopsis
 

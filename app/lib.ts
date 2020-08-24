@@ -5,11 +5,13 @@ load("sbbsdefs.js")
  * A whole bunch of functions
  */
 class BBS {
-    public config: IBBSConfigParams
+    // public config: IBBSConfigParams
 
-    constructor(config: IBBSConfigParams) {
-        this.config = config
+    public name: string
+
+    constructor() {
         console.inactivity_warning = 9999999
+        this.name = system.name
     }
     /**
      * Renders text
@@ -21,20 +23,20 @@ class BBS {
         let encoding = options.encoding || "CP437"
         let speed = options.speed || 30
 
-        if (options.clearScreen === true) {
+        if (options.clearScreenBefore === true) {
             console.line_counter = 0
             console.clear()
         }
 
-        if (options.path) {
+        if (options.file) {
             // @ts-ignore
-            let file = new File(`/euphoria/app/${options.path}`)
+            let file = new File(`/euphoria/app/${options.file}`)
 
             console.line_counter = 0
 
             // @ts-ignore
             if (!file.open("r")) {
-                alert("error opening file: " + options.path)
+                alert("error opening file: " + options.file)
                 return
             }
             // @ts-ignore
@@ -103,6 +105,11 @@ class BBS {
         // @ts-ignore
         return system.popen(`node /euphoria/scripts/${script}.js`)
     }
+
+    /**
+     * Execs script
+     * @param script
+     */
     execScript(script: string): void {
         // @ts-ignore
         system.exec(`node /euphoria/scripts/${script}.js`)

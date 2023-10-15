@@ -1,6 +1,6 @@
 # Imfamy
 
-The next version of Euphoria BBS written in TypeScript
+Imfamy is a proof of concept that demonstrates the possibility of creating Synchronet BBS' using TypeScript and running them in Docker containers.
 
 ## Synopsis
 

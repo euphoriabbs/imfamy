@@ -1,6 +1,6 @@
 # Imfamy
 
-Imfamy is a proof of concept that demonstrates the possibility of creating Synchronet BBS' using TypeScript and running them in Docker containers.
+Imfamy is a proof of concept that demonstrates the possibility of creating Synchronet BBS' using TypeScript and running them in Docker containers. It serves as the inspiration for Iniquity 3.
 
 ## Synopsis
 
